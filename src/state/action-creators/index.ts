@@ -16,3 +16,25 @@ export const withdrawMoney= (amount:number) => {
         })
     }
 }
+
+export const getGeoLocation = (geo:any) => {
+    
+    return (dispatch:any) => {
+
+        if(navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition( (position:any) => {
+                
+                 //return { lat: position.coords.latitude, lng: position.coords.longitude };
+                 geo = { lat: position.coords.latitude, lng: position.coords.longitude };
+                 // alert(JSON.stringify(geo));
+                 dispatch({
+                    type: "geocode",
+                    payload: geo
+                 })
+                
+             });
+         }
+     
+        
+    }
+}

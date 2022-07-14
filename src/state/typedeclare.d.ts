@@ -1,4 +1,9 @@
 export declare type action = {
     type: string;
-    payload: number;
+    payload: any;
+}
+
+export declare type geo = {
+    lat:any;
+    lng:any;
 }
