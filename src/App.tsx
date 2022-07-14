@@ -24,6 +24,11 @@ function BtnComponent() {
       <p>{lat}</p>
       <p>{lng}</p>
       <Button variant="contained" onClick={()=> getGeoLocation({lat:37.4267861, lng:-122.0806032})}>Your Coordinates</Button>
+     
+      <p>    
+        <img src={`https://maps.googleapis.com/maps/api/staticmap?center=37.4267861,-122.0806032&zoom=14&size=400x300&sensor=false&key=wdwdwdwdw45fdf&callback=initMap`} alt='maps' />
+      </p>  
+      
     </>
   );
 }
